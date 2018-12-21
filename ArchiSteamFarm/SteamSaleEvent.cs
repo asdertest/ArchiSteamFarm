@@ -39,8 +39,8 @@ namespace ArchiSteamFarm {
 			SaleEventTimer = new Timer(
 				async e => await Task.WhenAll(ExploreDiscoveryQueue(), VoteForSteamAwards()).ConfigureAwait(false),
 				null,
-				TimeSpan.FromHours(1.1) + TimeSpan.FromSeconds(Program.LoadBalancingDelay * Bot.Bots.Count), // Delay
-				TimeSpan.FromHours(8.1) // Period
+				TimeSpan.FromHours(0.2) + TimeSpan.FromSeconds(Program.LoadBalancingDelay * Bot.Bots.Count), // Delay
+				TimeSpan.FromHours(0.5) // Period
 			);
 		}
 
